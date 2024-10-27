@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    color: #797979;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 3px solid rgb(16, 16, 16);
+    box-shadow: 2px 2px 5px rgba(114, 114, 114, 0.4);
+    position: relative;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: #101010 8px solid;
+    border-radius: 50%;
+    z-index: 31;
+}
+
+.clock::after {
+    content: 'See, How Life is To Fast';
+    position: absolute;
+    bottom: 25%;
+    left: 33%;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    font-size: 40px;
+    text-shadow: 1px 1px 2px #797979;
+}
+
+.number-1 {
+    top: 16%;
+    left: 75%;
+}
+
+.number-2 {
+    top: 32%;
+    left: 85%;
+}
+
+.number-3 {
+    top: 50%;
+    left: 90%;
+}
+
+.number-4 {
+    top: 68%;
+    left: 84%;
+}
+
+.number-5 {
+    top: 83%;
+    left: 72%;
+}
+
+.number-6 {
+    top: 90%;
+}
+
+.number-7 {
+    top: 83%;
+    left: 28%;
+}
+
+.number-8 {
+    top: 68%;
+    left: 16%;
+}
+
+.number-9 {
+    top: 50%;
+    left: 10%;
+}
+.number-10 {
+    top: 32%;
+    left: 15%;
+}
+
+.number-11 {
+    top: 16%;
+    left: 25%;
+}
+
+.needles {
+    --rotation:0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+}
+
+.hour {
+    background-color: #fff;
+    width: 8px;
+    height: 30%;
+    z-index: 28;
+}
+.minute {
+    background-color: #fff;
+    width: 5px;
+    height: 40%;
+    z-index: 29;
+}
+
+.second {
+    width: 3px;
+    height: 45%;
+    background-color: red;
+    z-index: 30;
+}
